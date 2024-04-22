@@ -6,6 +6,13 @@ This project is a MovieFix- Movie List App built using React and Vite. It allows
 2. User can search for movies.
 3. User can get the details of the movie like overview , rating in a dialog box.
 
+## How to Use
+
+1. Clone the repository and navigate to the project directory.
+2. Run `npm install` to install the project dependencies.
+3. Use `npm run dev` to start the development server and preview the app locally.
+   
+
 ## Dependencies
 The project has the following dependencies:
 
@@ -24,12 +31,6 @@ In the project directory, you can run the following scripts:
 
 To run these scripts, use the following command format: `npm run <script-name>`
 
-## How to Use
-
-1. Clone the repository and navigate to the project directory.
-2. Run `npm install` to install the project dependencies.
-3. Use `npm run dev` to start the development server and preview the app locally.
-   
 ## Contributing
 
 If you want to contribute to this project, you are welcome to do so! Follow these steps:
