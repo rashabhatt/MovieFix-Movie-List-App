@@ -42,9 +42,6 @@ If you want to contribute to this project, you are welcome to do so! Follow thes
 5. Push your changes to your forked repository: `git push origin my-feature`.
 6. Open a pull request on the original repository, explaining your changes and the feature you added.
 
-We appreciate your contributions and will review your pull request as soon as possible!
-
-## Note
-Please note that the availability of trailers depends on whether the movie trailers are available on YouTube. If no trailer is found, the "Trailer Not Found" message will be displayed.
+I appreciate your contributions and will review your pull request as soon as possible!
 
 Happy Coding!
