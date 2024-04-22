@@ -9,9 +9,10 @@ This project is a MovieFix- Movie List App built using React and Vite. It allows
 ## Dependencies
 The project has the following dependencies:
 
-1. **axios**: Version 1.4.0 - A popular HTTP client library for making API requests.
-3. **react**: Version 18.2.0 - A JavaScript library for building user interfaces.
-4. **react-dom**: Version 18.2.0 - Provides DOM-specific methods that can be used at the top level of your app.
+1. **axios**- A popular HTTP client library for making API requests.
+3. **react**- A JavaScript library for building user interfaces.
+4. **react-dom** - Provides DOM-specific methods that can be used at the top level of your app.
+5. **@mui/material** -  Ready-to-use foundational React components, free forever. It includes Material UI, which implements Google's Material Design.
 
 ## Available Scripts
 
