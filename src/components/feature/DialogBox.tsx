@@ -6,7 +6,6 @@ import {
   DialogContentText,
   DialogActions,
   Button,
-  Stack,
 } from '@mui/material'
 import StarRating from './StarRating'
 
