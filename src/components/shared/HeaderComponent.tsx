@@ -21,6 +21,7 @@ import {
   MenuBarStyle,
 } from '../../styles/HeaderStyle'
 import SearchIcon from '@mui/icons-material/Search'
+import { useNavigate } from 'react-router-dom'
 
 interface HeaderProps {}
 
@@ -29,6 +30,7 @@ const pages = ['Movies', 'Series']
 const Header: React.FC<HeaderProps> = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
   const [showBackground, setShowBackground] = useState(false)
+  const navigate = useNavigate()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,6 +56,10 @@ const Header: React.FC<HeaderProps> = () => {
     setAnchorElNav(null)
   }
 
+  const handleSearchButtonClick = () => {
+    navigate('/search')
+  }
+
   return (
     <>
       <ElevationScroll>
@@ -68,7 +74,12 @@ const Header: React.FC<HeaderProps> = () => {
               >
                 MOVIEFIX
               </Typography>
-              <IconButton size='large' aria-label='search' color='inherit'>
+              <IconButton
+                size='large'
+                aria-label='search'
+                color='inherit'
+                onClick={handleSearchButtonClick}
+              >
                 <SearchIcon />
               </IconButton>
               <Box sx={IconBoxStyle}>

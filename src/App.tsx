@@ -1,16 +1,16 @@
-import Hero from './components/shared/HeroComponent'
-import Header from './components/shared/HeaderComponent'
-import MovieList from './components/main/MoviesList'
+import { Route, Routes } from 'react-router-dom'
+import HomePage from './pages/HomePage'
+import SearchPage from './pages/SearchPage' 
 
 function App() {
-  const VARIABLE_NAME = process.env.REACT_APP_API_URL
-  console.log('name', VARIABLE_NAME)
   return (
-    <div>
-      <Header />
-      <Hero />
-      <MovieList />
-    </div>
+    <Routes>
+      <Route path='/' element={<HomePage />} />
+      <Route path='/search' element={<SearchPage/>} />
+      {/* <Route path='/movie/:id' element={<MovieInfo />} />
+      <Route path='/actors/:id' element={<Actors />} />
+      <Route path='/profile/:id' element={<Profile />} />  */}
+    </Routes>
   )
 }
 
