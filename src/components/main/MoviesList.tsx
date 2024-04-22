@@ -19,7 +19,7 @@ interface Genre {
   name: string
 }
 
-const MovieList = (props: Movie) => {
+const MovieList = () => {
   const [movies, setMovies] = useState<Movie[]>([])
   const [groupedMovies, setGroupedMovies] = useState<{ [year: number]: Movie[] }>({})
   const [genres, setGenres] = useState<Genre[]>([])
