@@ -13,8 +13,8 @@ interface Movie {
   isTv?: any
   backdrop_path?: any
   genre_ids?: number[]
-  overview?:string
-  popularity: number;
+  overview?: string
+  popularity: number
 }
 
 interface Genre {
@@ -31,8 +31,8 @@ const MovieList = () => {
   const base_url = process.env.REACT_APP_IMG_URL as string
   const startYear = 2012
   const endYear = new Date().getFullYear()
-  const [open, setOpen] = useState(false);
-  const [selectedMovie, setSelectedMovie] = useState<Movie | any>(null);
+  const [open, setOpen] = useState(false)
+  const [selectedMovie, setSelectedMovie] = useState<Movie | any>(null)
 
   useEffect(() => {
     fetchMovies(startYear, endYear)
@@ -72,7 +72,7 @@ const MovieList = () => {
           poster_path: movie.poster_path,
           genre_ids: movie.genre_ids,
           overview: movie.overview,
-          popularity: movie.popularity
+          popularity: movie.popularity,
         }))
         allMovies = [...allMovies, ...moviesWithGenres]
       }
@@ -104,14 +104,13 @@ const MovieList = () => {
   }
 
   const handleOpenDialog = (movie: Movie) => {
-    setSelectedMovie(movie);
-    setOpen(true);
-  };
+    setSelectedMovie(movie)
+    setOpen(true)
+  }
 
   const handleCloseDialog = () => {
-    setOpen(false);
-  };
-
+    setOpen(false)
+  }
 
   return (
     <div>

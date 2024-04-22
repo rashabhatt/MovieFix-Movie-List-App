@@ -66,15 +66,15 @@ const Header: React.FC<HeaderProps> = () => {
         <AppBar sx={{ backgroundColor: showBackground ? 'black' : 'transparent' }} elevation={0}>
           <Container maxWidth='xl'>
             <Toolbar disableGutters>
-            <Link to="/" style={{ textDecoration: 'none' }}>
-              <Typography
-                variant='h4'
-                noWrap
-                component='a'
-                sx={{ ...LogoHeadingStyle, '&:hover': { color: 'white' } }}
-              >
-                MOVIEFIX
-              </Typography>
+              <Link to='/' style={{ textDecoration: 'none' }}>
+                <Typography
+                  variant='h4'
+                  noWrap
+                  component='a'
+                  sx={{ ...LogoHeadingStyle, '&:hover': { color: 'white' } }}
+                >
+                  MOVIEFIX
+                </Typography>
               </Link>
               <IconButton
                 size='large'
