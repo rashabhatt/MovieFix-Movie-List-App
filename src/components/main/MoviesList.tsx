@@ -99,7 +99,11 @@ const MovieList = (props: Movie) => {
   return (
     <div>
       <MovieGenreSelector genres={genres} onSelectGenre={handleSelectGenre} />
-      <Typography variant='h5' component='h5' sx={{ mt: '15px', mb: '15px',  ml: '8px', color: 'white' }}>
+      <Typography
+        variant='h5'
+        component='h5'
+        sx={{ mt: '15px', mb: '15px', ml: '8px', color: 'white' }}
+      >
         {selectedGenreName}
       </Typography>
       <Grid container spacing={3}>

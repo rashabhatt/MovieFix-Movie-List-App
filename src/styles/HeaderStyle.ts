@@ -44,8 +44,4 @@ export {
   DrawerLogoHeadingStyle,
   DrawerBoxStyle,
   DrawerButtonStyle,
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> 79abca296f424cddbedb4237ab2e04f9804e1213

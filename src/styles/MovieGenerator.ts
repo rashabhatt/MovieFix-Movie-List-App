@@ -15,7 +15,7 @@ const mediaQueryStyle = {
 
 const chipStyle = {
   width: '100px',
-  marginTop:'15px',
+  marginTop: '15px',
   marginRight: '5px',
   '@media only screen and (maxWidth: 600px)': {
     width: '100%',
