@@ -11,7 +11,7 @@ export const ImageOverlay = styled('div')({
   position: 'absolute',
   top: 0,
   left: 0,
-  width: '50%',
+  width: '100%',
   height: '100%',
   backgroundColor: 'rgba(0, 0, 0, 0.5)',
   opacity: 0,
