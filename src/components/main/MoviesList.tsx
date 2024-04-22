@@ -76,7 +76,6 @@ const MovieList = () => {
         }))
         allMovies = [...allMovies, ...moviesWithGenres]
       }
-      console.log('all movies', allMovies)
       setMovies(allMovies)
     } catch (error) {
       console.error('Error fetching movies:', error)
