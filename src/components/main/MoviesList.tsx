@@ -3,6 +3,7 @@ import instance from '../../services/axios'
 import { Grid, Typography, CardMedia, Card } from '@mui/material'
 import { ImageOverlay, MovieCardContainer, OverlayContent } from '../../styles/MoviesList'
 import MovieGenreSelector from './MovieGenreSelector'
+import MovieDialog from '../feature/DialogBox'
 
 interface Movie {
   title?: string
@@ -12,6 +13,8 @@ interface Movie {
   isTv?: any
   backdrop_path?: any
   genre_ids?: number[]
+  overview?:string
+  popularity: number;
 }
 
 interface Genre {
@@ -28,6 +31,8 @@ const MovieList = () => {
   const base_url = process.env.REACT_APP_IMG_URL as string
   const startYear = 2012
   const endYear = new Date().getFullYear()
+  const [open, setOpen] = useState(false);
+  const [selectedMovie, setSelectedMovie] = useState<Movie | any>(null);
 
   useEffect(() => {
     fetchMovies(startYear, endYear)
@@ -65,7 +70,9 @@ const MovieList = () => {
           title: movie.title,
           release_year: movie.release_date ? new Date(movie.release_date).getFullYear() : 0,
           poster_path: movie.poster_path,
-          genre_ids: movie.genre_ids, // Store genre_ids in Movie object
+          genre_ids: movie.genre_ids,
+          overview: movie.overview,
+          popularity: movie.popularity
         }))
         allMovies = [...allMovies, ...moviesWithGenres]
       }
@@ -96,6 +103,16 @@ const MovieList = () => {
     setSelectedGenreName(genreName)
   }
 
+  const handleOpenDialog = (movie: Movie) => {
+    setSelectedMovie(movie);
+    setOpen(true);
+  };
+
+  const handleCloseDialog = () => {
+    setOpen(false);
+  };
+
+
   return (
     <div>
       <MovieGenreSelector genres={genres} onSelectGenre={handleSelectGenre} />
@@ -125,7 +142,7 @@ const MovieList = () => {
                 .map((movie, index) => (
                   <Grid item xs={6} sm={4} md={4} lg={3} key={index}>
                     <MovieCardContainer>
-                      <Card>
+                      <Card onClick={() => handleOpenDialog(movie)}>
                         <CardMedia
                           component='img'
                           height='70%'
@@ -149,6 +166,7 @@ const MovieList = () => {
             </Grid>
           </Grid>
         ))}
+        <MovieDialog open={open} onClose={handleCloseDialog} movie={selectedMovie} />
       </Grid>
     </div>
   )

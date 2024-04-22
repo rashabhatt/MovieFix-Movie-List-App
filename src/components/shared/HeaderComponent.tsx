@@ -21,7 +21,7 @@ import {
   MenuBarStyle,
 } from '../../styles/HeaderStyle'
 import SearchIcon from '@mui/icons-material/Search'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 interface HeaderProps {}
 
@@ -66,6 +66,7 @@ const Header: React.FC<HeaderProps> = () => {
         <AppBar sx={{ backgroundColor: showBackground ? 'black' : 'transparent' }} elevation={0}>
           <Container maxWidth='xl'>
             <Toolbar disableGutters>
+            <Link to="/" style={{ textDecoration: 'none' }}>
               <Typography
                 variant='h4'
                 noWrap
@@ -74,6 +75,7 @@ const Header: React.FC<HeaderProps> = () => {
               >
                 MOVIEFIX
               </Typography>
+              </Link>
               <IconButton
                 size='large'
                 aria-label='search'
